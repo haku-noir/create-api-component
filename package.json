@@ -2,7 +2,9 @@
   "name": "create-api-component",
   "version": "1.0.0",
   "description": "Create API Component",
-  "main": "index.js",
+  "bin": {
+    "create-component-container": "main"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
