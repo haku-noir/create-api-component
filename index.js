@@ -23,7 +23,13 @@ module.exports = (name) => {
   const XXX = getHeadUpper(name);
 
   Promise.resolve()
-   .then(() => console.log(srcDir, XXX))
+    .then(() => (
+      fs.readFile(`${__dirname}/hooks/hooksAPI.tsx`, 'utf8')
+    ))
+    .then(data => {
+      const replacedData = data.replace(/XXX/g, XXX);
+      return fs.outputFile(`${srcDir}/api/${XXX}.tsx`, replacedData);
+    })
    .catch(err => {
      console.log('Fail!');
      console.error(err)
