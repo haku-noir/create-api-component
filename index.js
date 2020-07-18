@@ -28,7 +28,7 @@ module.exports = (name) => {
     ))
     .then(data => {
       const replacedData = data.replace(/XXX/g, XXX);
-      return fs.outputFile(`${srcDir}/api/${XXX}.tsx`, replacedData);
+      return fs.outputFile(`${srcDir}/api/${XXX}API.tsx`, replacedData);
     })
    .catch(err => {
      console.log('Fail!');
