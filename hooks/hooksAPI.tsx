@@ -6,9 +6,11 @@ import { RootState } from 'store';
 export const XXXAPI: React.FC<{}> = () => {
   const dispatch = useDispatch<Dispatch<Action>>();
 
-  const state = useSelector<RootState, RootState>(state => state);
+  const data = useSelector<RootState, RootState>(
+    state => state
+  );
 
-  React.useEffect(() => {}, [state]);
+  React.useEffect(() => {}, [data]);
 
   return null;
 };
